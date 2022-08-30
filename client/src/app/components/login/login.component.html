@@ -1,0 +1,8 @@
+<div id="login">
+  <form [formGroup]="loginForm">
+    <div class="login-form">
+      <input type="text" id="nickname" formControlName="nickname" name="nickname">
+      <button (click)="sendNickname()">Login</button>
+    </div>
+  </form>
+</div>

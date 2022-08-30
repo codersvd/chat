@@ -1,0 +1,13 @@
+.users {
+  list-style-type: none;
+  padding: 0;
+  li{
+    padding: 10px;
+    background: #b5e0e0;
+    border-radius: 5px;
+    margin: 5px 0;
+    &.active {
+      background: #0fadad;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div *ngIf="usersService.users$ | async as users">
+  <h2>Users</h2>
+  <ul class="users">
+    <li *ngFor="let user of users" [className]="nickname === user.nickname ? 'active' : '' ">
+      {{user.nickname}}
+    </li>
+  </ul>
+</div>

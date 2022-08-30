@@ -1,0 +1,19 @@
+<div id="chat">
+  <div class="users-list">
+    <app-users></app-users>
+  </div>
+  <div class="chat-main-window">
+    <h2>Chat</h2>
+    <div id="chat-display" #chatView>
+      <div *ngIf="chatService.messages$ | async as messages">
+        <div *ngFor="let msg of messages" class="message">
+          <div>{{msg.date}}</div>
+          <div class="user-message"><span>{{msg.nickname}}</span> {{msg.message}}</div>
+        </div>
+      </div>
+    </div>
+    <div id="chat-input-text">
+      <input #message="ngModel" type="text" [(ngModel)]="msg" id="message" name="message" value=""/>
+      <button (click)="onSend(message.value)">Send</button>
+    </div>
+  </div>
